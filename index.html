@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>diziler</title>
+    </head>
+    <body>
+        <button onclick="ürün()">Eklenen Ürünler</button>
+
+        <p id="ürünlerr"></p>
+
+        <p id="silme"></p>
+
+
+        <script>
+
+            function ürün(){
+                
+        let a = prompt("Lütfen 1. ürünü giriniz", "")
+        let b = prompt("Lütfen 2. ürünü giriniz", "")
+        let c = prompt("Lütfen 3. ürünü giriniz", "")
+
+        let ürünler=new Array();
+        ürünler.push(a);
+        ürünler.push(b);
+        ürünler.push(c);
+
+        document.getElementById("ürünlerr").innerHTML=a+" "+b+" "+c;
+
+        let d = prompt("Lütfen silmek istediğiniz ürünü giriniz", "")
+        if(d==a){
+            ürünler.pop(0);
+            document.getElementById("silme").innerHTML=ürünler;
+        }
+        else if(d==b){
+            ürünler.pop(1);
+            document.getElementById("silme").innerHTML=ürünler;
+        }
+        else if(d==c){
+            ürünler.pop(2);
+            document.getElementById("silme").innerHTML=ürünler;
+        }else{
+            document.getElementById("silme").innerHTML="Geçersiz Ürün";
+
+        }
+
+            }
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
